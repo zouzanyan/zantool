@@ -1,2 +1,10 @@
 # Project exclude paths
 /target/
+.classpath
+.project
+src/test
+.idea
+.settings
+META-INF
+zantool.iml
+
