@@ -8,12 +8,16 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
+import javax.swing.border.EmptyBorder;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
+
 import javax.swing.JPanel;
 import javax.swing.JDialog;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.FlowLayout;
 
 public class MainWindow {
 
@@ -27,7 +31,7 @@ public class MainWindow {
 			public void run() {
 				try {
 			        // 设置外观为操作系统默认
-			        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+//			        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 					MainWindow window = new MainWindow();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
@@ -93,5 +97,14 @@ public class MainWindow {
 		
 		JPanel panel_2 = new JPanel();
 		tabbedPane.addTab("New tab", null, panel_2, null);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setPreferredSize(new Dimension(800, 30));
+		frame.getContentPane().add(panel_3, BorderLayout.SOUTH);
+		panel_3.setLayout(null);
+		JPanel panel_4 = new GcInfoPanel();
+		panel_4.setBounds(0, 0, 240, 30);
+		panel_3.add(panel_4);
+		panel_4.setLayout(null);
 	}
 }

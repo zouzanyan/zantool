@@ -47,12 +47,12 @@ public class FileCodecPanel extends JPanel {
 
 		JProgressBar progressBar = new JProgressBar();
 		progressBar.setStringPainted(true);
-		progressBar.setBounds(10, 480, 753, 21);
+		progressBar.setBounds(10, 455, 753, 21);
 		add(progressBar);
 
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setForeground(Color.RED);
-		lblNewLabel_1.setBounds(10, 455, 332, 15);
+		lblNewLabel_1.setBounds(10, 430, 332, 15);
 		add(lblNewLabel_1);
 
 		JLabel lblNewLabel = new JLabel("文件路径:");
